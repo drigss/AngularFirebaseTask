@@ -1,4 +1,5 @@
-import { BrowserModule } from '@angular/platform-browser';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { AngularFireModule } from '@angular/fire';
@@ -13,10 +14,11 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     AppComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
